@@ -1,0 +1,114 @@
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.result-container{
+    width: 50vw;
+    height: 20rem;
+    background-color: var(--nav-color);
+    text-align: center;
+    position: relative;
+    
+}
+
+.result-container::before{
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+    border-bottom: 2rem solid var(--nav-color);
+}
+
+.result-container .result-img{
+    position: absolute;
+    top: -25rem;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 5rem;
+    height: 5rem; */
+}
+
+.result-container h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--link-color);
+}
+
+.result-container .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+.result-container .form input[type="number"] ,
+.result-container .form select{
+    height: 3rem;
+    width: 90%;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+}
+
+
+.result-container .form input[type="submit"]{
+    height: 50px;
+    width: 50%;
+    background-color: var(--link-color);
+    color: var(--nav-color);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+/* table result */
+
+.table-container{
+    width: 50vw;
+    height: 20rem;
+    background-color: var(--nav-color);
+    text-align: center;
+    position: relative;
+    display: none;
+}
+
+
+.table-container table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    color: var(--link-color);
+    font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .container{
+        width: var(--container-width-sm);
+        max-height: fit-content;
+    }
+
+    .result-container{
+        margin-top: 80%;
+    }
+}
